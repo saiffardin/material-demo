@@ -22,6 +22,6 @@
    * under the same parent.
    */
   .example-tree div[role=group] > .mat-tree-node {
-    padding-left: 30px;
+    /* padding-left: 30px; */
   }
   

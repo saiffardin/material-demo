@@ -3,7 +3,14 @@
     <!-- There is inline padding applied to this node using styles.
       This padding value depends on the mat-icon-button width. -->
     <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle>
-        saif
+
+        <!-- every node will have this '>' on their left -->
+
+        <button mat-icon-button matTreeNodeToggle [attr.aria-label]="'Toggle ' + node.name">
+            <mat-icon class="mat-icon-rtl-mirror">
+                {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+            </mat-icon>
+        </button>
         {{node.name}}
     </mat-tree-node>
 
@@ -23,5 +30,4 @@
             <ng-container matTreeNodeOutlet></ng-container>
         </div>
     </mat-nested-tree-node>
-
 </mat-tree>
