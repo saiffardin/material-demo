@@ -1,10 +1,18 @@
-<div class="">
+<div class="split-views">
     <!-- <sp-example-title [type]="exampleEnum.NESTED"></sp-example-title> -->
     <div class="split-example" style="height: 800px;margin: 10px;">
         <as-split direction="horizontal" [restrictMove]="true" [useTransition]="true">
 
+            <!-- hr-0 -->
+            <as-split-area [size]="12">
+                <as-split direction="vertical" [restrictMove]="true">
+                    <app-nested-tree></app-nested-tree>
+                </as-split>
+            </as-split-area>
+
+
             <!-- hr-1 -->
-            <as-split-area [size]="50">
+            <as-split-area [size]="44">
                 <as-split direction="vertical" [restrictMove]="true">
                     <!-- hr-1 vr-1 -->
                     <as-split-area>
@@ -40,8 +48,9 @@
                 </as-split>
             </as-split-area>
 
+            
             <!-- hr-2 -->
-            <as-split-area [size]="50">
+            <as-split-area [size]="44">
                 <as-split direction="vertical" [restrictMove]="true">
                     <!-- hr-2 vr-1 -->
                     <as-split-area [size]="50">

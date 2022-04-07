@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTreeModule } from '@angular/material/tree';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -18,6 +19,7 @@ import { SplitViewComponent } from './split-view/split-view.component';
     MatTreeModule,
     MatIconModule,
     AngularSplitModule,
+    MatSidenavModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
