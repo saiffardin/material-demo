@@ -31,6 +31,43 @@ const TREE_DATA: FoodNode[] = [
   },
 ];
 
+const TREE_DATA_1: FoodNode[] = [
+  {
+    name: 'A',
+    children: [
+      { name: 'A1' },
+      {
+        name: 'A2',
+        children: [
+          { name: 'A21', children: [] },
+          {
+            name: 'A22',
+            children: [
+              { name: 'A221', children: [] },
+              { name: 'A222', children: [] },
+              { name: 'A221', children: [] },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+
+  { name: 'B' },
+
+  {
+    name: 'C',
+    children: [
+      { name: 'C1' },
+      { name: 'C2' },
+      {
+        name: 'C3',
+        children: [{ name: 'C31' }, { name: 'C32' }],
+      },
+    ],
+  },
+];
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -41,7 +78,8 @@ export class AppComponent {
   dataSource = new MatTreeNestedDataSource<FoodNode>();
 
   constructor() {
-    this.dataSource.data = TREE_DATA;
+    // this.dataSource.data = TREE_DATA;
+    this.dataSource.data = TREE_DATA_1;
   }
 
   hasChild = (_: number, node: FoodNode) =>
