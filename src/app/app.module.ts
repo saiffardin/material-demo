@@ -5,9 +5,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material/material.module';
+import { NestedTreeComponent } from './nested-tree/nested-tree.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, NestedTreeComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
