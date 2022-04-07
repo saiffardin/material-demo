@@ -1,0 +1,7 @@
+<h1>Parent Component</h1>
+
+<button (click)="userLoggedInParent=true">Login</button>
+{{userLoggedInParent}}
+<button (click)="userLoggedInParent=false">Logout</button>
+
+<app-child [loggedInChildFunction]="userLoggedInParent"></app-child>
