@@ -1,7 +1,4 @@
-import { NestedTreeControl } from '@angular/cdk/tree';
 import { Component } from '@angular/core';
-import { MatTreeNestedDataSource } from '@angular/material/tree';
-
 
 @Component({
   selector: 'app-root',
@@ -9,5 +6,5 @@ import { MatTreeNestedDataSource } from '@angular/material/tree';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  
+  ngOnInit(): void {}
 }
