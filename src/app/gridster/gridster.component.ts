@@ -1,30 +1,28 @@
 import { Component, OnInit } from '@angular/core';
 import {
-    CompactType,
-    DisplayGrid,
-    Draggable,
-    GridsterConfig,
-    GridsterItem,
-    GridType,
-    PushDirections,
-    Resizable,
-  } from 'angular-gridster2';
-  
-  interface Safe extends GridsterConfig {
-    draggable: Draggable;
-    resizable: Resizable;
-    pushDirections: PushDirections;
-  }
+  CompactType,
+  DisplayGrid,
+  Draggable,
+  GridsterConfig,
+  GridsterItem,
+  GridType,
+  PushDirections,
+  Resizable,
+} from 'angular-gridster2';
+
+interface Safe extends GridsterConfig {
+  draggable: Draggable;
+  resizable: Resizable;
+  pushDirections: PushDirections;
+}
 
 @Component({
   selector: 'app-gridster',
   templateUrl: './gridster.component.html',
-  styleUrls: ['./gridster.component.css']
+  styleUrls: ['./gridster.component.css'],
 })
 export class GridsterComponent implements OnInit {
-
-  constructor() { }
-
+  constructor() {}
 
   options!: Safe;
   dashboard!: Array<GridsterItem>;
@@ -42,10 +40,12 @@ export class GridsterComponent implements OnInit {
       useTransformPositioning: true,
       mobileBreakpoint: 640,
       useBodyForBreakpoint: false,
+
       minCols: 1,
-      maxCols: 100,
+      maxCols: 10,
       minRows: 1,
-      maxRows: 100,
+      maxRows: 10,
+
       maxItemCols: 100,
       minItemCols: 1,
       maxItemRows: 100,
@@ -89,10 +89,7 @@ export class GridsterComponent implements OnInit {
     this.dashboard = [
       { cols: 2, rows: 1, y: 0, x: 0 },
       { cols: 2, rows: 2, y: 0, x: 2, hasContent: true },
-      { cols: 1, rows: 1, y: 0, x: 4 },
-      { cols: 1, rows: 1, y: 2, x: 5 },
-      { cols: 1, rows: 1, y: 1, x: 0 },
-      { cols: 1, rows: 1, y: 1, x: 0 },
+
       {
         cols: 2,
         rows: 2,
@@ -129,7 +126,6 @@ export class GridsterComponent implements OnInit {
         resizeEnabled: false,
         label: 'Drag&Resize Disabled',
       },
-      { cols: 1, rows: 1, y: 2, x: 6 },
     ];
   }
 
@@ -148,5 +144,4 @@ export class GridsterComponent implements OnInit {
   addItem(): void {
     this.dashboard.push({ x: 0, y: 0, cols: 1, rows: 1 });
   }
-
 }
